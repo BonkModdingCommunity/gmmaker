@@ -15,6 +15,10 @@ module.exports = {
   optimization: {
     minimize: minimize,
   },
+  cache: {
+    type: 'filesystem',
+    allowCollectingMemory: true,
+  },
   module: {
     rules: [
       {
@@ -70,7 +74,7 @@ module.exports = {
         type: 'asset/inline',
       },
       {
-        test: /\.(raw\.js)$/i,
+        test: /\.(raw|umd)\.js$/i,
         use: minimize ? [
           {
             loader: path.resolve('./minify-loader.js'),
@@ -99,7 +103,7 @@ module.exports = {
           },
         },
       ],
-    }),
+    })
   ],
   entry: {
     'js/injector': './src/inject/injector.js',
