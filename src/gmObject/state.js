@@ -4,7 +4,7 @@
 import declareMeths from '../ses/declareMeths.raw.js';
 import declareGameObject from '../ses/declareGameObject.raw.js';
 import seedrandomCode from '../ses/seedrandom.raw.js';
-import sesCode from '../ses/ses.raw.js';
+import sesCode from '../../node_modules/ses/dist/ses.umd.js';
 
 import blocklyErrors from '../blockly/errormessages.js';
 

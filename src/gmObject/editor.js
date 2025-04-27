@@ -18,8 +18,8 @@ import gmBlockRenderer from '../blockly/renderer.js';
 
 // text libs
 import * as monaco from 'monaco-editor';
-import monacoWorker from '../monaco/editor.worker.raw.js';
-import monacoTypescript from '../monaco/ts.worker.raw.js';
+import monacoWorker from '!raw-loader!../../dist/editor.worker.js';
+import monacoTypescript from '!raw-loader!../../dist/ts.worker.js';
 import monacoDefs from '!raw-loader!../monaco/gmm.d.ts';
 import monacoDefSnippets from '../monaco/snippets.js';
 
